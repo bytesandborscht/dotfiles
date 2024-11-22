@@ -4,8 +4,14 @@ if [[ ! -d ~/.config/nvim ]]; then
 	mkdir -p ~/.config/nvim
 fi
 
+if [[ ! -d ~/.config/i3 ]]; then
+	mkdir -p ~/.config/i3
+fi
+
 echo "[*] Linking ~/.config/nvim/init.vim .."
 ln -sf $(pwd)/.config/nvim/init.vim ~/.config/nvim/init.vim
+echo "[*] Linking ~/.config/i3/config .."
+ln -sf $(pwd)/.config/i3/config ~/.config/i3/config
 echo "[*] Linking ~/.tmux.conf"
 ln -sf $(pwd)/.tmux.conf ~/.tmux.conf
 echo "[*] Linking ~/.bashrc"
