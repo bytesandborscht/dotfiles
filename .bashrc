@@ -22,3 +22,11 @@ alias gd='git diff'
 #function cd {
 #    builtin cd "$@" && ls -latrF
 #    }
+
+# ssh-agent via systemd user-service
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+
+# enable bash_completion
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+fi
