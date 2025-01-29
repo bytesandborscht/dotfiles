@@ -1,0 +1,6 @@
+[commit]
+	gpgsign = true
+[user]
+	signingkey = B1A5D50ECAF279BFAD687BBD807DE7600D30A6B8
+	name = bytesandborscht
+	email = contact@bytesandborscht.com
