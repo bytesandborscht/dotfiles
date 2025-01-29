@@ -23,6 +23,11 @@ alias gd='git diff'
 #    builtin cd "$@" && ls -latrF
 #    }
 
+# I want my own binaries in $PATH
+if [ -d "$HOME/git/bin" ]; then
+	PATH="$HOME/git/bin:$PATH"
+fi
+
 # ssh-agent via systemd user-service
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
