@@ -8,6 +8,10 @@ if [[ ! -d ~/.sway ]]; then
 	mkdir -p ~/.sway
 fi
 
+if [[ ! -d ~/.config/i3 ]]; then
+	mkdir -p ~/.config/i3
+fi
+
 echo "[*] Linking ~/.config/nvim/init.vim .."
 ln -sf $(pwd)/.config/nvim/init.vim ~/.config/nvim/init.vim
 echo "[*] Linking ~/.config/i3/config .."
