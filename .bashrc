@@ -24,8 +24,8 @@ alias gd='git diff'
 #    }
 
 # I want my own binaries in $PATH
-if [ -d "$HOME/git/bin" ]; then
-	PATH="$HOME/git/bin:$PATH"
+if [ -d "$HOME/bin" ]; then
+	PATH="$HOME/bin:$PATH"
 fi
 
 # ssh-agent via systemd user-service
@@ -35,3 +35,5 @@ export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
 fi
+
+export GPG_TTY=$(tty)
