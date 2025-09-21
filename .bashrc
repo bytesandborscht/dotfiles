@@ -18,11 +18,6 @@ alias gl='git log --show-signature'
 alias gs='git status'
 alias gd='git diff'
 
-## ls on cd
-#function cd {
-#    builtin cd "$@" && ls -latrF
-#    }
-
 # I want my own binaries in $PATH
 if [ -d "$HOME/bin" ]; then
 	PATH="$HOME/bin:$PATH"
@@ -36,4 +31,7 @@ if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
 fi
 
+# environment variables
 export GPG_TTY=$(tty)
+export EDITOR='nvim'
+export VISUAL='nvim'
