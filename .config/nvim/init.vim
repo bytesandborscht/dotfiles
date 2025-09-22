@@ -12,6 +12,8 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+" unhighlight search
+nnoremap <silent> <Esc><Esc> :noh<CR>
 " use system clipboard
 set clipboard=unnamedplus
 " defaults for tabs vs. spaces
@@ -52,3 +54,6 @@ augroup ft_yaml_ansible
   autocmd FileType yaml,ansible setlocal tabstop=2 shiftwidth=2 expandtab
   autocmd FileType yaml,ansible setlocal foldmethod=indent
 augroup END
+
+" json
+autocmd FileType json setlocal equalprg=jq
